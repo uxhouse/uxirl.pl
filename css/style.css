@@ -1,0 +1,273 @@
+.navbarContainer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1360px;
+  padding: 0 15px;
+}
+
+.navbar {
+  background-color: #fff;
+  position: relative;
+}
+
+.navbar ::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 30%;
+  height: 3px;
+  background-color: #0a3180;
+}
+
+.menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 23px 0;
+}
+
+.logoLink {
+  text-decoration: none;
+}
+
+.logo {
+  color: #0a3180;
+  font-weight: 600;
+}
+
+.menuLinks {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.menuLink {
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 600;
+  color: #3b3b3b;
+}
+
+.menuLink:last-child {
+  margin-right: 0;
+}
+
+.hero {
+  background-color: #faf1e2;
+  padding: 150px 0 160px 0;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    padding: 120px 0 125px 0;
+  }
+}
+
+.hero .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero .container .drawing {
+  position: absolute;
+  right: -230px;
+  top: 45%;
+  z-index: -1;
+}
+
+.heroContent {
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 30px;
+}
+
+.heroContent h1 {
+  font-size: 70px;
+  font-weight: 600;
+  color: #0a3180;
+  margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .heroContent h1 {
+    font-size: 55px;
+  }
+}
+
+.heroContent h1 .withDecoration {
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent h1 .withDecoration span {
+  white-space: nowrap;
+}
+
+.heroContent h1 .withDecoration img {
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+  width: 90%;
+  z-index: -1;
+}
+
+.heroContent p {
+  font-size: 21px;
+  line-height: 32px;
+}
+
+@media (max-width: 1200px) {
+  .heroContent p {
+    font-size: 18px;
+  }
+}
+
+.heroContent button {
+  margin-top: 50px;
+}
+
+.movieWrapper {
+  -ms-flex: 1;
+  flex: 1;
+  padding: 17px;
+  background-color: #fff;
+  border: 1px solid #0a3180;
+  border-radius: 6px;
+  margin-left: 30px;
+  box-shadow: 4px 2px 0px #f39e41;
+  position: relative;
+}
+
+.movie {
+  border-radius: 6px;
+}
+
+.movie img {
+  width: 100%;
+  display: block;
+}
+
+.movieInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.movieInfo p {
+  color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #faf8f5;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1360px;
+  padding: 0 15px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+.smallContainer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 50px 0;
+  }
+}
+
+.primaryButton {
+  color: #fff;
+  font-weight: 500;
+  padding: 14px 32px;
+  background-color: #0a3180;
+  border: 1px solid #0a3180;
+  border-radius: 32px;
+  box-shadow: 4px 2px 0px #f39e41;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.secondaryButton {
+  color: #0a3180;
+  font-weight: 500;
+  padding: 14px 32px;
+  background-color: #fff;
+  border: 1px solid #0a3180;
+  border-radius: 32px;
+  box-shadow: 4px 2px 0px #f39e41;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.buttonIcon {
+  margin-right: 10px;
+  padding-bottom: 2px;
+}
+
+.logoSection {
+  background-color: #fff;
+}
+
+.logoSection .smallContainer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 35px 0;
+}

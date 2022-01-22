@@ -1,0 +1,149 @@
+.navbarContainer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1360px;
+  padding: 0 15px;
+}
+.navbar {
+  background-color: $white;
+  position: relative;
+
+  ::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 30%;
+    height: 3px;
+    background-color: $primary;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 0;
+}
+
+.logoLink {
+  text-decoration: none;
+}
+
+.logo {
+  color: $primary;
+  font-weight: 600;
+}
+
+.menuLinks {
+  display: flex;
+  align-items: center;
+}
+
+.menuLink {
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 600;
+  color: $black;
+}
+
+.menuLink:last-child {
+  margin-right: 0;
+}
+
+.hero {
+  background-color: $bg-dark;
+  padding: 150px 0 160px 0;
+  overflow-x: hidden;
+
+  @media (max-width: 1200px) {
+    padding: 120px 0 125px 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    .drawing {
+      position: absolute;
+      right: -230px;
+      top: 45%;
+      z-index: -1;
+    }
+  }
+}
+
+.heroContent {
+  flex: 1;
+  margin-right: 30px;
+  h1 {
+    font-size: 70px;
+    font-weight: 600;
+    color: $primary;
+    margin-top: 0;
+    @media (max-width: 1200px) {
+      font-size: 55px;
+    }
+
+    .withDecoration {
+      position: relative;
+      z-index: 1;
+      span {
+        white-space: nowrap;
+      }
+      img {
+        position: absolute;
+        left: 50px;
+        bottom: 0;
+        width: 90%;
+        z-index: -1;
+      }
+    }
+  }
+  p {
+    font-size: 21px;
+    line-height: 32px;
+    @media (max-width: 1200px) {
+      font-size: 18px;
+    }
+  }
+  button {
+    margin-top: 50px;
+  }
+}
+
+.movieWrapper {
+  flex: 1;
+  padding: 17px;
+  background-color: $white;
+  border: 1px solid $primary;
+  border-radius: 6px;
+  margin-left: 30px;
+  box-shadow: 4px 2px 0px $secondary;
+  position: relative;
+}
+
+.movie {
+  border-radius: 6px;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.movieInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $white;
+  }
+}
