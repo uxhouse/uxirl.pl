@@ -1,0 +1,89 @@
+.profits {
+  padding: 150px 0 160px 0;
+
+  @media (max-width: 1200px) {
+    padding: 120px 0 125px 0;
+  }
+  .heading,
+  .subheading {
+    text-align: center;
+  }
+}
+
+.profitsWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.documentsImage {
+  flex: 1;
+}
+
+.profitsTiles {
+  flex: 1;
+}
+
+.profitTile {
+  background-color: $white;
+  border: 1px solid $primary;
+  border-radius: 6px;
+  box-shadow: 4px 2px 0px $secondary;
+  color: $primary;
+  padding: 37px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.25s;
+
+  .mainInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .leftSide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+      margin-right: 10px;
+      path {
+        fill: $primary;
+      }
+    }
+  }
+
+  .rightSide {
+    svg path {
+      fill: $primary;
+    }
+  }
+
+  .profitTileText {
+    margin: 0;
+    font-size: 14px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s, margin 0.25s;
+  }
+
+  &-active {
+    background-color: $primary;
+    color: $white;
+
+    .rightSide svg {
+      transform: rotate(180deg);
+      path {
+        fill: $white;
+      }
+    }
+
+    .leftSide svg path {
+      fill: $secondary;
+    }
+    .profitTileText {
+      margin-top: 37px;
+      max-height: 500px;
+    }
+  }
+}

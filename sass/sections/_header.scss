@@ -78,28 +78,19 @@
 .heroContent {
   flex: 1;
   margin-right: 30px;
-  h1 {
-    font-size: 70px;
-    font-weight: 600;
-    color: $primary;
-    margin-top: 0;
-    @media (max-width: 1200px) {
-      font-size: 55px;
-    }
 
-    .withDecoration {
-      position: relative;
-      z-index: 1;
-      span {
-        white-space: nowrap;
-      }
-      img {
-        position: absolute;
-        left: 50px;
-        bottom: 0;
-        width: 90%;
-        z-index: -1;
-      }
+  .withDecoration {
+    position: relative;
+    z-index: 1;
+    span {
+      white-space: nowrap;
+    }
+    img {
+      position: absolute;
+      left: 50px;
+      bottom: 0;
+      width: 90%;
+      z-index: -1;
     }
   }
   p {

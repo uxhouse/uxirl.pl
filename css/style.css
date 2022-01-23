@@ -25,9 +25,9 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+      justify-content: space-between;
   -ms-flex-align: center;
-  align-items: center;
+      align-items: center;
   padding: 23px 0;
 }
 
@@ -44,7 +44,7 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-  align-items: center;
+      align-items: center;
 }
 
 .menuLink {
@@ -74,7 +74,7 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-  align-items: center;
+      align-items: center;
   position: relative;
   z-index: 1;
 }
@@ -88,33 +88,20 @@
 
 .heroContent {
   -ms-flex: 1;
-  flex: 1;
+      flex: 1;
   margin-right: 30px;
 }
 
-.heroContent h1 {
-  font-size: 70px;
-  font-weight: 600;
-  color: #0a3180;
-  margin-top: 0;
-}
-
-@media (max-width: 1200px) {
-  .heroContent h1 {
-    font-size: 55px;
-  }
-}
-
-.heroContent h1 .withDecoration {
+.heroContent .withDecoration {
   position: relative;
   z-index: 1;
 }
 
-.heroContent h1 .withDecoration span {
+.heroContent .withDecoration span {
   white-space: nowrap;
 }
 
-.heroContent h1 .withDecoration img {
+.heroContent .withDecoration img {
   position: absolute;
   left: 50px;
   bottom: 0;
@@ -139,7 +126,7 @@
 
 .movieWrapper {
   -ms-flex: 1;
-  flex: 1;
+      flex: 1;
   padding: 17px;
   background-color: #fff;
   border: 1px solid #0a3180;
@@ -167,15 +154,120 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-  flex-direction: column;
+      flex-direction: column;
   -ms-flex-pack: center;
-  justify-content: center;
+      justify-content: center;
   -ms-flex-align: center;
-  align-items: center;
+      align-items: center;
 }
 
 .movieInfo p {
   color: #fff;
+}
+
+.profits {
+  padding: 150px 0 160px 0;
+}
+
+@media (max-width: 1200px) {
+  .profits {
+    padding: 120px 0 125px 0;
+  }
+}
+
+.profits .heading,
+.profits .subheading {
+  text-align: center;
+}
+
+.profitsWrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-top: 100px;
+}
+
+.documentsImage {
+  -ms-flex: 1;
+      flex: 1;
+}
+
+.profitsTiles {
+  -ms-flex: 1;
+      flex: 1;
+}
+
+.profitTile {
+  background-color: #fff;
+  border: 1px solid #0a3180;
+  border-radius: 6px;
+  box-shadow: 4px 2px 0px #f39e41;
+  color: #0a3180;
+  padding: 37px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.25s;
+}
+
+.profitTile .mainInfo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.profitTile .leftSide {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.profitTile .leftSide svg {
+  margin-right: 10px;
+}
+
+.profitTile .leftSide svg path {
+  fill: #0a3180;
+}
+
+.profitTile .rightSide svg path {
+  fill: #0a3180;
+}
+
+.profitTile .profitTileText {
+  margin: 0;
+  font-size: 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s, margin 0.25s;
+}
+
+.profitTile-active {
+  background-color: #0a3180;
+  color: #fff;
+}
+
+.profitTile-active .rightSide svg {
+  transform: rotate(180deg);
+}
+
+.profitTile-active .rightSide svg path {
+  fill: #fff;
+}
+
+.profitTile-active .leftSide svg path {
+  fill: #f39e41;
+}
+
+.profitTile-active .profitTileText {
+  margin-top: 37px;
+  max-height: 500px;
 }
 
 *,
@@ -235,7 +327,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-  align-items: center;
+      align-items: center;
 }
 
 .secondaryButton {
@@ -250,7 +342,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-  align-items: center;
+      align-items: center;
 }
 
 .buttonIcon {
@@ -266,8 +358,27 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+      justify-content: space-between;
   -ms-flex-align: center;
-  align-items: center;
+      align-items: center;
   padding: 35px 0;
 }
+
+.heading {
+  font-size: 70px;
+  font-weight: 600;
+  color: #0a3180;
+  margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .heading {
+    font-size: 55px;
+  }
+}
+
+.subheading {
+  font-size: 21px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=style.css.map */

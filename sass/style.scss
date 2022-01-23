@@ -1,5 +1,6 @@
 @import "variables";
 @import "sections/header";
+@import "sections/profits";
 
 *,
 *::before,
@@ -81,4 +82,19 @@ body {
     align-items: center;
     padding: 35px 0;
   }
+}
+
+.heading {
+  font-size: 70px;
+  font-weight: 600;
+  color: $primary;
+  margin-top: 0;
+  @media (max-width: 1200px) {
+    font-size: 55px;
+  }
+}
+
+.subheading {
+  font-size: 21px;
+  font-weight: 400;
 }
