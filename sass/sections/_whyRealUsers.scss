@@ -1,0 +1,61 @@
+.whyRealUsers {
+  padding: 100px 0 160px 0;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 145px;
+  }
+}
+.advantageTile {
+  padding: 48px 140px;
+  margin: 100px auto;
+  width: 100%;
+  max-width: 1012px;
+  position: relative;
+  text-align: center;
+  background-color: $white;
+
+  .advantageTitle {
+    font-size: 35px;
+    line-height: 48px;
+    font-weight: 300;
+    margin-top: 0;
+  }
+
+  .withDecoration {
+    position: relative;
+    z-index: 1;
+    span {
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    img {
+      position: absolute;
+      left: -60px;
+      bottom: -10px;
+      width: 145%;
+      z-index: -1;
+    }
+  }
+  .advantageText {
+    font-size: 21px;
+    line-height: 32px;
+  }
+
+  img {
+    z-index: -1;
+    position: absolute;
+  }
+  .clockImage {
+    left: -240px;
+    top: -50px;
+  }
+  .heartImage {
+    right: -250px;
+    top: 20px;
+  }
+  .gearImage {
+    left: -200px;
+    top: 130px;
+  }
+}
