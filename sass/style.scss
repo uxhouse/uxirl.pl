@@ -1,6 +1,8 @@
 @import "variables";
 @import "sections/header";
 @import "sections/profits";
+@import "sections/steps";
+@import "slider";
 
 *,
 *::before,
@@ -31,8 +33,12 @@ body {
 .smallContainer {
   margin: 0 auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   padding: 0 15px;
+
+  @media (max-width: 1200px) {
+    max-width: 1000px;
+  }
 }
 
 .section {
@@ -97,4 +103,10 @@ body {
 .subheading {
   font-size: 21px;
   font-weight: 400;
+}
+
+.decorativeWrapper {
+  border: 1px solid $primary;
+  border-radius: 6px;
+  box-shadow: 4px 2px 0px $secondary;
 }

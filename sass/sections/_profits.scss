@@ -26,9 +26,6 @@
 
 .profitTile {
   background-color: $white;
-  border: 1px solid $primary;
-  border-radius: 6px;
-  box-shadow: 4px 2px 0px $secondary;
   color: $primary;
   padding: 37px;
   cursor: pointer;
@@ -78,8 +75,11 @@
       }
     }
 
-    .leftSide svg path {
-      fill: $secondary;
+    .leftSide {
+      font-weight: 600;
+      svg path {
+        fill: $secondary;
+      }
     }
     .profitTileText {
       margin-top: 37px;

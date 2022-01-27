@@ -1,0 +1,139 @@
+.steps {
+  padding: 150px 0 160px 0;
+  background-color: $bg-dark;
+
+  .smallContainer {
+    padding: 85px;
+    background-color: $white;
+  }
+  .headingWrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .heading {
+    text-align: center;
+  }
+  .withDecoration {
+    position: relative;
+    z-index: 1;
+    span {
+      white-space: nowrap;
+    }
+    img {
+      position: absolute;
+      left: 50px;
+      bottom: 0;
+      width: 90%;
+      z-index: -1;
+    }
+  }
+  .buttonWrapper button {
+    margin: 30px auto 0 auto;
+  }
+}
+
+.stepsIndicators {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.stepIndicator {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+}
+
+.stepIndicatorDot {
+  position: relative;
+  z-index: 1;
+  width: 58px;
+  margin: 0 auto;
+}
+.dotWrapper {
+  width: 58px;
+  height: 58px;
+  background-color: $white;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primary;
+  font-size: 21px;
+}
+.dotDecoration {
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 58px;
+  height: 58px;
+  border: 2px solid $secondary;
+  border-radius: 50%;
+  background-color: $white;
+  z-index: -1;
+}
+
+.stepLabelWrapper {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.stepLabel {
+  font-size: 14px;
+}
+
+.showStep {
+  font-size: 14px;
+  text-decoration: underline;
+  margin-top: 15px;
+  color: $primary;
+  cursor: pointer;
+}
+
+.stepIndicator.active {
+  .dotWrapper {
+    background-color: $primary;
+    color: $secondary;
+    font-weight: 600;
+  }
+  .dotDecoration {
+    background-color: $secondary;
+  }
+  .stepLabel {
+    font-weight: 600;
+  }
+}
+
+.stepMainText {
+  font-size: 35px;
+  color: $primary;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  span {
+    font-weight: 600;
+  }
+}
+
+.price {
+  font-size: 35px;
+  color: $primary;
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+}
