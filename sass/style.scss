@@ -4,6 +4,7 @@
 @import "sections/steps";
 @import "sections/whyRealUsers";
 @import "sections/useKnowledge";
+@import "sections/haveQuestions";
 @import "slider";
 
 *,
@@ -105,10 +106,28 @@ body {
 .subheading {
   font-size: 21px;
   font-weight: 400;
+  margin-top: 0;
 }
 
 .decorativeWrapper {
   border: 1px solid $primary;
   border-radius: 6px;
   box-shadow: 4px 2px 0px $secondary;
+}
+
+.sectionsRelativeWrapper {
+  position: relative;
+
+  .drawing {
+    position: absolute;
+    bottom: 250px;
+    left: 0;
+
+    @media (max-width: 1500px) {
+      left: -100px;
+    }
+    @media (max-width: 1200px) {
+      left: -200px;
+    }
+  }
 }
