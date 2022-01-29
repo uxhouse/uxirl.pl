@@ -5,6 +5,7 @@
 @import "sections/whyRealUsers";
 @import "sections/useKnowledge";
 @import "sections/haveQuestions";
+@import "sections/footer";
 @import "slider";
 
 *,
@@ -20,6 +21,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: $bg-light;
+  color: $black;
 }
 
 .container {

@@ -1,0 +1,26 @@
+.footer {
+  padding: 60px 0 150px 0;
+  text-align: center;
+}
+
+.footerText {
+  font-size: 21px;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  p,
+  a {
+    font-size: 14px;
+    margin: 0 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}
