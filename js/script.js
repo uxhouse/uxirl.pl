@@ -1,3 +1,18 @@
+// PROGRESS BAR
+
+const progressBar = document.querySelector('.progressBar');
+
+const setProgress = () => {
+    const scrollingPercent = ((window.scrollY + window.innerHeight) / document.body.clientHeight) * 100;
+    progressBar.style.right = `${100 - scrollingPercent}%`;
+}
+
+setProgress();
+
+document.addEventListener('scroll', setProgress);
+
+// PROFIT TILES
+
 const profitTiles = document.querySelectorAll('.profitTile');
 
 profitTiles.forEach(tile => {
@@ -5,6 +20,8 @@ profitTiles.forEach(tile => {
         tile.classList.toggle('profitTile-active');
     })
 });
+
+// SLIDER
 
 const rangeInput = document.querySelector('.slider');
 const rangeOutput = document.querySelector('.sliderOutput');
