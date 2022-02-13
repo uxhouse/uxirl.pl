@@ -23,11 +23,11 @@
                         <div class="menuLinks">
                             <a href="#" class="menuLink">Czy to dla mnie?</a>
                             <a href="#" class="menuLink">Jak wygląda badanie?</a>
-                            <a href="#" class="menuLink">Koszt badania</a>
-                            <a href="#" class="menuLink">
+                            <a href="#steps" class="menuLink">Koszt badania</a>
+                            <a href="#help" class="menuLink">
                                 <button class="secondaryButton">Pomoc</button>
                             </a>
-                            <a href="#" class="menuLink">
+                            <a href="#steps" class="menuLink">
                                 <button class="primaryButton">
                                     <img class="buttonIcon" src="images/buttonIcon.svg" alt="" />
                                     Wykonaj test UX
@@ -209,97 +209,150 @@
                 </div>
             </div>
         </section>
-        <section class="steps">
-            <div class="smallContainer decorativeWrapper" id="step-1">
-                <div class="headingWrapper">
-                    <h1 class="heading">Wykonaj test UX
-                    <span class="withDecoration"><span>w 3 krokach</span><img src="images/textDecoration.svg" alt="" /></span></h1>
-                </div>
-                <div class="stepsIndicators">
-                    <div class="stepIndicator active">
-                        <div class="stepIndicatorDot">
-                            <div class="dotDecoration"></div>
-                            <div class="dotWrapper">
-                                <span>1</span>
+        <section class="steps" id="steps">
+            <form action="/action_page.php" method="post" id="form1">
+                <div class="smallContainer decorativeWrapper">
+                    <div class="headingWrapper visible">
+                        <h1 class="heading">Wykonaj test UX
+                        <span class="withDecoration"><span>w 3 krokach</span><img src="images/textDecoration.svg" alt="" /></span></h1>
+                    </div>
+                    <div class="stepsIndicators">
+                        <div class="stepIndicator active" id="stepIndicator-1">
+                            <div class="stepIndicatorDot">
+                                <div class="dotDecoration"></div>
+                                <div class="dotWrapper">
+                                    <span>1</span>
+                                </div>
+                            </div>
+                            <div class="stepLabelWrapper">
+                                <p class="stepLabel">Wybierz ilość badaczy UX.</p>
+                            </div>
+                            <p class="showStep">Rozwiń...</p>
+                            <img src="images/arrowRight.svg" alt="">
+                        </div>
+                        <div class="stepIndicator" id="stepIndicator-2">
+                            <div class="stepIndicatorDot">
+                                <div class="dotDecoration"></div>
+                                <div class="dotWrapper">
+                                    <span>2</span>
+                                </div>
+                            </div>
+                            <div class="stepLabelWrapper">
+                                <p class="stepLabel">Wgraj projekt lub podaj adres URL.</p>
+                            </div>
+                            <p class="showStep">Rozwiń...</p>
+                            <img src="images/arrowRight.svg" alt="">
+                        </div>
+                        <div class="stepIndicator" id="stepIndicator-3">
+                            <div class="stepIndicatorDot">
+                                <div class="dotDecoration"></div>
+                                <div class="dotWrapper">
+                                    <span>3</span>
+                                </div>
+                            </div>
+                            <div class="stepLabelWrapper">
+                                <p class="stepLabel">Opisz czego dotyczy zadanie.</p>
+                            </div>
+                            <p class="showStep">Rozwiń...</p>
+                            <img src="images/arrowRight.svg" alt="">
+                        </div>
+                        <div class="stepIndicator" id="stepIndicator-4">
+                            <div class="stepIndicatorDot">
+                                <div class="dotDecoration"></div>
+                                <div class="dotWrapper">
+                                    <span>4</span>
+                                </div>
+                            </div>
+                            <div class="stepLabelWrapper">
+                                <p class="stepLabel">Sprawdzimy poprawność testu.</p>
+                            </div>
+                            <p class="showStep">Rozwiń...</p>
+                            <img src="images/arrowRight.svg" alt="">
+                        </div>
+                        <div class="stepIndicator" id="stepIndicator-5">
+                            <div class="stepIndicatorDot">
+                                <div class="dotDecoration"></div>
+                                <div class="dotWrapper">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <div class="stepLabelWrapper">
+                                <p class="stepLabel">Wyślij test UX do badaczy.</p>
+                            </div>
+                            <p class="showStep">Rozwiń...</p>
+                        </div>
+                    </div>
+                    <div class="stepContent active" id="stepContent-1">
+                        <p class="stepMainText"><span>Krok 1.</span> Wybierz ilość badaczy UX.</p>
+                        <div class="sliderNumbers">
+                            <p class="sliderNumber">0</p>
+                            <p class="sliderNumber">5</p>
+                            <p class="sliderNumber">10</p>
+                        </div>
+                        <div class="sliderWrapper">
+                            <input class="slider" name="investigatorsNumber" type="range" value="5" min="0" max="10" oninput="rangevalue.value=value" />
+                            <output class="sliderOutput" id="rangevalue">5</output>
+                        </div>
+                        <p class="stepMainText">Koszt badania:</p>
+                        <p class="price"></p>
+                    </div>
+                    <div class="stepContent" id="stepContent-2">
+                        <p class="stepMainText"><span>Krok 2.</span> Wgraj projekt lub podaj adres URL.</p>
+                        <div class="switchWrapper">
+                            <p class="switchLabel active">Chcę wgrać plik z projektem.</p>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="sliderRound"></span>
+                            </label>
+                            <p class="switchLabel">Chcę dodać adres URL.</p>
+                        </div>
+                        <div class="uploadFileContainer active">
+                            <div class="fileInputWrapper">
+                                <input type="text" name="file" id="fileName" placeholder="Nazwa pliku..." readonly="readonly" />
+                                <button class="secondaryButton" id="fileInputButton">Wgraj plik...</button>
+                                <input type="file" id="fileInput" />
+                            </div>
+                            <p class="smallText">Akceptujemy projekty interaktywne w Figma, Axure, Sketch, Adobe XD. <br>Nie masz interaktywnego projektu? Zaznacz “Stwórz projekt interaktywny do testów” i wgraj statyczne makiety.</p>
+                            <div class="checkboxWrapper">
+                                <input type="checkbox" class="checkbox" name="prototype" />
+                                <div class="checkbox-icon"><img src="images/checkIcon.svg" alt="" /></div>
+                                <label>Stwórzcie prototyp interaktywny do testów.</label>
                             </div>
                         </div>
-                        <div class="stepLabelWrapper">
-                            <p class="stepLabel">Wybierz ilość badaczy UX.</p>
+                        <div class="urlAddressContainer">
+                            <input type="text" name="urlAddress" placeholder="https://..." />
                         </div>
-                        <p class="showStep">Rozwiń...</p>
-                        <img src="images/arrowRight.svg" alt="">
                     </div>
-                    <div class="stepIndicator">
-                        <div class="stepIndicatorDot">
-                            <div class="dotDecoration"></div>
-                            <div class="dotWrapper">
-                                <span>2</span>
-                            </div>
-                        </div>
-                        <div class="stepLabelWrapper">
-                            <p class="stepLabel">Wgraj projekt lub podaj adres URL.</p>
-                        </div>
-                        <p class="showStep">Rozwiń...</p>
-                        <img src="images/arrowRight.svg" alt="">
+                    <div class="stepContent" id="stepContent-3">
+                        <p class="stepMainText"><span>Krok 3.</span> Opisz czego dotyczy zadanie.</p>
+                        <textarea class="textarea" name="description" placeholder="Opis zadania..."></textarea>
                     </div>
-                    <div class="stepIndicator">
-                        <div class="stepIndicatorDot">
-                            <div class="dotDecoration"></div>
-                            <div class="dotWrapper">
-                                <span>3</span>
-                            </div>
+                    <div class="stepContent" id="stepContent-4">
+                        <p class="stepMainText"><span>Dziękujemy!</span><br>Twoje badanie zostało przyjęte do realizacji.</p>
+                        <div class="inputsWrapper">
+                            <p class="smallText">Poniżej znajdziesz podsumowanie. Uzupełnij dane kontaktowe,<br>
+                                nasz specjalista wyśle do Ciebie potwierdzenie poprawności testu.</p>
+                            <input type="text" name="firsAndLastName" placeholder="Imię i Nazwisko*..." />
+                            <input type="email" name="email" placeholder="Adres e-mail*..." />
+                            <input type="text" name="phoneNumber" placeholder="Numer telefonu..." />
                         </div>
-                        <div class="stepLabelWrapper">
-                            <p class="stepLabel">Opisz czego dotyczy zadanie.</p>
-                        </div>
-                        <p class="showStep">Rozwiń...</p>
-                        <img src="images/arrowRight.svg" alt="">
                     </div>
-                    <div class="stepIndicator">
-                        <div class="stepIndicatorDot">
-                            <div class="dotDecoration"></div>
-                            <div class="dotWrapper">
-                                <span>4</span>
-                            </div>
-                        </div>
-                        <div class="stepLabelWrapper">
-                            <p class="stepLabel">Sprawdzimy poprawność testu.</p>
-                        </div>
-                        <p class="showStep">Rozwiń...</p>
-                        <img src="images/arrowRight.svg" alt="">
-                    </div>
-                    <div class="stepIndicator">
-                        <div class="stepIndicatorDot">
-                            <div class="dotDecoration"></div>
-                            <div class="dotWrapper">
-                                <span>5</span>
-                            </div>
-                        </div>
-                        <div class="stepLabelWrapper">
-                            <p class="stepLabel">Wyślij test UX do badaczy.</p>
-                        </div>
-                        <p class="showStep">Rozwiń...</p>
+                    <div class="stepContent" id="stepContent-5"></div>
+                    <div class="buttonWrapper">
+                        <button type="button" class="secondaryButton hidden" id="prevStepButton">
+                            Cofnij
+                        </button>
+                        <button type="button" class="primaryButton" id="nextStepButton">
+                            <img class="buttonIcon" src="images/buttonIcon.svg" alt="" />
+                            Dalej
+                        </button>
+                        <button class="primaryButton hidden" id="submitButton" type="submit" form="form1" value="Submit">
+                            <img class="buttonIcon" src="images/buttonIcon.svg" alt="" />
+                            Wyślij
+                        </button>
                     </div>
                 </div>
-                <p class="stepMainText"><span>Krok 1.</span> Wybierz ilość badaczy UX.</p>
-                <div class="sliderNumbers">
-                    <p class="sliderNumber">0</p>
-                    <p class="sliderNumber">5</p>
-                    <p class="sliderNumber">10</p>
-                </div>
-                <div class="sliderWrapper">
-                    <input class="slider" type="range" value="5" min="0" max="10" oninput="rangevalue.value=value" />
-                    <output class="sliderOutput" id="rangevalue">5</output>
-                </div>
-                <p class="stepMainText">Koszt badania:</p>
-                <p class="price"></p>
-                <div class="buttonWrapper">
-                    <button class="primaryButton">
-                        <img class="buttonIcon" src="images/buttonIcon.svg" alt="" />
-                        Wykonaj test UX
-                    </button>
-                </div>
-            </div>
+            </form>
         </section>
         <section class="whyRealUsers">
             <div class="smallContainer">
@@ -339,7 +392,7 @@
                 </div>
             </section>
             
-            <section class="haveQuestions">
+            <section class="haveQuestions" id="help">
                 <div class="container">
                     <h1 class="heading">Masz pytania?</h1>
                     <h3 class="subheading">Umów się na 30 minutową sesję z UX testerem.</h3>

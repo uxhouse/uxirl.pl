@@ -1,4 +1,7 @@
 @import "variables";
+@import "slider";
+@import "switch";
+@import "inputs";
 @import "sections/header";
 @import "sections/profits";
 @import "sections/steps";
@@ -6,7 +9,6 @@
 @import "sections/useKnowledge";
 @import "sections/haveQuestions";
 @import "sections/footer";
-@import "slider";
 
 *,
 *::before,
@@ -132,4 +134,10 @@ body {
       left: -200px;
     }
   }
+}
+
+.smallText {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
 }

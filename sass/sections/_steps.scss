@@ -9,7 +9,12 @@
   .headingWrapper {
     width: 100%;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 70px auto;
+    display: none;
+
+    &.visible {
+      display: block;
+    }
   }
   .heading {
     text-align: center;
@@ -28,15 +33,23 @@
       z-index: -1;
     }
   }
-  .buttonWrapper button {
-    margin: 30px auto 0 auto;
+  .buttonWrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    button {
+      margin: 0 15px;
+      &.hidden {
+        display: none;
+      }
+    }
   }
 }
 
 .stepsIndicators {
   display: flex;
   align-items: center;
-  margin-top: 70px;
 }
 
 .stepIndicator {
@@ -47,6 +60,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  cursor: pointer;
 
   img {
     position: absolute;
@@ -87,6 +101,13 @@
   z-index: -1;
 }
 
+.stepContent {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
 .stepLabelWrapper {
   flex-grow: 1;
   padding: 0 20px;
@@ -120,6 +141,7 @@
 
 .stepMainText {
   font-size: 35px;
+  line-height: 48px;
   color: $primary;
   font-weight: 300;
   text-align: center;
@@ -130,10 +152,68 @@
   }
 }
 
+// 1 step
+
 .price {
   font-size: 35px;
   color: $primary;
   text-align: center;
   font-weight: 600;
   margin: 0;
+}
+
+// 2 step
+
+.uploadFileContainer {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &.active {
+    display: flex;
+  }
+
+  .smallText {
+    margin-top: 40px;
+  }
+}
+
+.switchWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.switchLabel {
+  font-size: 14px;
+  color: $black;
+  margin: 0 10px;
+  &.active {
+    color: $primary;
+  }
+}
+
+.urlAddressContainer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  &.active {
+    display: flex;
+  }
+}
+
+// step 4
+
+.inputsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .smallText {
+    margin: 20px 0;
+  }
+  input {
+    margin: 15px 0;
+  }
 }

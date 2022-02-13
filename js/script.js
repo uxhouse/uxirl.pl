@@ -21,6 +21,74 @@ profitTiles.forEach(tile => {
     })
 });
 
+// STEPS
+
+const stepsIndicators = document.querySelectorAll('.stepIndicator');
+const stepsContents = document.querySelectorAll('.stepContent');
+const stepsHeading = document.querySelector('.steps .headingWrapper');
+const prevStepButton = document.querySelector('#prevStepButton');
+const nextStepButton = document.querySelector('#nextStepButton');
+const submitButton = document.querySelector('#submitButton');
+
+let activeStep = 1;
+
+
+const setActiveIndicator = (indicatorNumber) => {
+    activeStep = indicatorNumber;
+    stepsIndicators.forEach(indicator => {
+        indicator.classList.remove('active');
+    });
+    document.getElementById(`stepIndicator-${indicatorNumber}`).classList.add('active');
+
+    stepsContents.forEach(content => {
+        content.classList.remove('active');
+    });
+    document.getElementById(`stepContent-${indicatorNumber}`).classList.add('active');
+
+    switch (indicatorNumber) {
+        case 1:
+            stepsHeading.classList.add('visible');
+            prevStepButton.classList.add('hidden');
+            nextStepButton.classList.remove('hidden');
+            submitButton.classList.add('hidden');
+            break;
+        case 2:
+        case 3:
+            stepsHeading.classList.remove('visible');
+            prevStepButton.classList.remove('hidden');
+            nextStepButton.classList.remove('hidden');
+            submitButton.classList.add('hidden');
+            break;
+        case 4:
+            stepsHeading.classList.remove('visible');
+            prevStepButton.classList.remove('hidden');
+            nextStepButton.classList.add('hidden');
+            submitButton.classList.remove('hidden');
+            break;
+        case 5:
+            stepsHeading.classList.remove('visible');
+            prevStepButton.classList.add('hidden');
+            nextStepButton.classList.add('hidden');
+            submitButton.classList.add('hidden');
+            break;
+        default:
+            break;
+
+    }
+};
+
+stepsIndicators.forEach((indicator, i) => {
+    indicator.addEventListener('click', () => setActiveIndicator(i + 1));
+});
+
+nextStepButton.addEventListener('click', () => {
+    setActiveIndicator(activeStep + 1);
+})
+prevStepButton.addEventListener('click', () => {
+    setActiveIndicator(activeStep - 1);
+})
+
+
 // SLIDER
 
 const rangeInput = document.querySelector('.slider');
@@ -55,3 +123,44 @@ function handleInputChange(e) {
 }
 
 rangeInput.addEventListener('input', handleInputChange);
+
+// SWITCH
+
+const switchElement = document.querySelector('.switch .sliderRound');
+const switchLabels = document.querySelectorAll('.switchLabel');
+const uploadFileContainer = document.querySelector('.uploadFileContainer');
+const urlAddressContainer = document.querySelector('.urlAddressContainer');
+
+let switchState = true;
+
+const setSwitchActive = (state) => {
+    switchLabels.forEach(label => {
+        label.classList.remove('active');
+    })
+    if (state) {
+        switchLabels[0].classList.add('active');
+        uploadFileContainer.classList.add('active');
+        urlAddressContainer.classList.remove('active');
+    } else {
+        switchLabels[1].classList.add('active');
+        urlAddressContainer.classList.add('active');
+        uploadFileContainer.classList.remove('active');
+    }
+}
+
+setSwitchActive(switchState);
+
+switchElement.addEventListener('click', (e) => {
+    e.stopPropagation();
+    setSwitchActive(!switchState);
+    switchState = !switchState;
+})
+
+// UPLOAD FILE
+
+const fileInput = document.getElementById('fileInput');
+const fileNameInput = document.getElementById('fileName');
+
+fileInput.addEventListener('change', function () {
+    fileNameInput.value = this.files[0].name;
+})
