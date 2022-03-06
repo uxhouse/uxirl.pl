@@ -926,9 +926,91 @@ input[type="email"] {
   padding: 220px 0 150px 0;
 }
 
+.howItWorks .smallContainer {
+  max-width: 900px;
+}
+
+@media (max-width: 1200px) {
+  .howItWorks .smallContainer {
+    max-width: 900px;
+  }
+}
+
 .howItWorks .heading,
 .howItWorks .subheading {
   text-align: center;
+}
+
+.howItWorks .infoSteps {
+  margin-top: 100px;
+}
+
+.howItWorks .infoStep {
+  background-color: #fff;
+  color: #0a3180;
+  padding: 30px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.25s;
+}
+
+.howItWorks .infoStepCollapsed {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.howItWorks .infoStepHeading {
+  font-size: 21px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.howItWorks .infoStepHeading span {
+  font-weight: 600;
+}
+
+.howItWorks .infoStepIcon svg path {
+  fill: #0a3180;
+}
+
+.howItWorks .infoStepContent {
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s, margin 0.25s;
+}
+
+.howItWorks .infoStepText {
+  -ms-flex: 2;
+      flex: 2;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3b3b3b;
+}
+
+.howItWorks .infoStepImage {
+  -ms-flex: 3;
+      flex: 3;
+  margin-left: 50px;
+}
+
+.howItWorks .infoStep.active .infoStepIcon svg {
+  transform: rotate(180deg);
+}
+
+.howItWorks .infoStep.active .infoStepIcon svg path {
+  fill: #f39e41;
+}
+
+.howItWorks .infoStep.active .infoStepContent {
+  margin-top: 37px;
+  max-height: 1000px;
 }
 
 .footer {

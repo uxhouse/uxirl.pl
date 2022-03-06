@@ -81,10 +81,10 @@ stepsIndicators.forEach((indicator, i) => {
     indicator.addEventListener('click', () => setActiveIndicator(i + 1));
 });
 
-nextStepButton.addEventListener('click', () => {
+nextStepButton && nextStepButton.addEventListener('click', () => {
     setActiveIndicator(activeStep + 1);
 })
-prevStepButton.addEventListener('click', () => {
+prevStepButton && prevStepButton.addEventListener('click', () => {
     setActiveIndicator(activeStep - 1);
 })
 
@@ -108,8 +108,9 @@ const prices = {
     9: 900,
     10: 1000,
 }
-
-price.innerText = `${prices[5]}zł`;
+if (price) {
+    price.innerText = `${prices[5]}zł`;
+}
 
 function handleInputChange(e) {
     const min = e.target.min
@@ -122,7 +123,7 @@ function handleInputChange(e) {
 
 }
 
-rangeInput.addEventListener('input', handleInputChange);
+rangeInput && rangeInput.addEventListener('input', handleInputChange);
 
 // SWITCH
 
@@ -148,19 +149,41 @@ const setSwitchActive = (state) => {
     }
 }
 
-setSwitchActive(switchState);
+if (switchElement && switchLabels && uploadFileContainer && urlAddressContainer) {
+    setSwitchActive(switchState);
 
-switchElement.addEventListener('click', (e) => {
-    e.stopPropagation();
-    setSwitchActive(!switchState);
-    switchState = !switchState;
-})
+    switchElement.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setSwitchActive(!switchState);
+        switchState = !switchState;
+    })
+}
 
 // UPLOAD FILE
 
 const fileInput = document.getElementById('fileInput');
 const fileNameInput = document.getElementById('fileName');
 
-fileInput.addEventListener('change', function () {
+fileInput && fileInput.addEventListener('change', function () {
     fileNameInput.value = this.files[0].name;
 })
+
+// INFO STEPS
+
+const infoSteps = document.querySelectorAll('.infoStep');
+
+infoSteps && infoSteps.forEach(step => {
+    step.addEventListener('click', () => {
+        const active = step.classList.contains('active');
+
+        infoSteps.forEach(s => {
+            s.classList.remove('active');
+        })
+
+        if (active) {
+            step.classList.remove('active');
+        } else {
+            step.classList.add('active');
+        }
+    })
+});

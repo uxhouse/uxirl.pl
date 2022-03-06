@@ -1,7 +1,80 @@
 .howItWorks {
   padding: 220px 0 150px 0;
+  .smallContainer {
+    max-width: 900px;
+    @media (max-width: 1200px) {
+      max-width: 900px;
+    }
+  }
   .heading,
   .subheading {
     text-align: center;
+  }
+
+  .infoSteps {
+    margin-top: 100px;
+  }
+
+  .infoStep {
+    background-color: $white;
+    color: $primary;
+    padding: 30px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: 0.25s;
+  }
+
+  .infoStepCollapsed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .infoStepHeading {
+    font-size: 21px;
+    font-weight: 400;
+    margin: 0;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .infoStepIcon {
+    svg path {
+      fill: $primary;
+    }
+  }
+
+  .infoStepContent {
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s, margin 0.25s;
+  }
+
+  .infoStepText {
+    flex: 2;
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: $black;
+  }
+
+  .infoStepImage {
+    flex: 3;
+    margin-left: 50px;
+  }
+
+  .infoStep.active {
+    .infoStepIcon svg {
+      transform: rotate(180deg);
+      path {
+        fill: $secondary;
+      }
+    }
+    .infoStepContent {
+      margin-top: 37px;
+      max-height: 1000px;
+    }
   }
 }
