@@ -84,6 +84,12 @@ body {
   align-items: center;
 }
 
+.primaryButton:hover,
+.secondaryButton:hover {
+  text-decoration: underline;
+  box-shadow: none;
+}
+
 .buttonIcon {
   margin-right: 10px;
 }
