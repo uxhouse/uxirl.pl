@@ -24,17 +24,19 @@
                         </div>
                     </a>
                     <div class="menuLinks">
-                        <a href="/info/#czy-to-dla-mnie" class="menuLink">Czy to dla mnie?</a>
-                        <a href="/info/#jak-wyglada-badanie" class="menuLink">Jak wygląda badanie?</a>
+                        <a href="#czy-to-dla-mnie" class="menuLink">Czy to dla mnie?</a>
+                        <a href="#jak-wyglada-badanie" class="menuLink">Jak wygląda badanie?</a>
                         <a href="/#wykonaj-test" class="menuLink">Koszt badania</a>
-                        <a href="#pomoc" class="menuLink">
-                            <button class="secondaryButton">Pomoc</button>
+                        <a href="#pomoc" class="menuLink linkButton">
+                            <div class="secondaryButton">
+                                Pomoc
+                            </div>
                         </a>
-                        <a href="/#wykonaj-test" class="menuLink">
-                            <button class="primaryButton">
+                        <a href="/#wykonaj-test" class="menuLink linkButton">
+                            <div class="primaryButton">
                                 <img class="buttonIcon" src="../images/buttonIcon.svg" alt="" />
                                 Wykonaj test UX
-                            </button>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -42,7 +44,7 @@
             <div class="progressBar"></div>
         </nav>
     </header>
-    <section class="howItWorks">
+    <section class="howItWorks" id="jak-wyglada-badanie">
         <div class="smallContainer">
             <h1 class="heading">Jak to działa</h1>
             <h3 class="subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -169,6 +171,82 @@
                         <img class="infoStepImage" src="https://via.placeholder.com/250x150" />
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="isItForMe" id="czy-to-dla-mnie">
+        <div class="container">
+            <div class="decorativeWrapper">
+                <h1 class="heading">Czy to dla mnie?</h1>
+                <h3 class="subheading">Sprawdź jak testy mogą pomóc Tobie w pracy.</h3>
+                <div class="businessTypesWrapper">
+                    <div class="businessType">
+                        <img class="businessTypeImage" src="../images/cart.svg" />
+                        <p class="businessTypeText">Prowadzę<br>sklep internetowy</p>
+                        <div class="checkboxButton">
+                            <div class="checkboxButtonIcon"><img src="../images/checkIcon.svg" alt="" /></div>
+                            <span>Wybierz</span>
+                        </div>
+                    </div>
+                    <div class="businessType">
+                        <img class="businessTypeImage" src="../images/pencil.svg" />
+                        <p class="businessTypeText">Jesteśmy<br>startupem</p>
+                        <div class="checkboxButton">
+                            <div class="checkboxButtonIcon"><img src="../images/checkIcon.svg" alt="" /></div>
+                            <span>Wybierz</span>
+                        </div>
+                    </div>
+                    <div class="businessType">
+                        <img class="businessTypeImage" src="../images/code.svg" />
+                        <p class="businessTypeText">Jesteśmy<br>softwarehouse</p>
+                        <div class="checkboxButton">
+                            <div class="checkboxButtonIcon"><img src="../images/checkIcon.svg" alt="" /></div>
+                            <span>Wybierz</span>
+                        </div>
+                    </div>
+                    <div class="businessType">
+                        <img class="businessTypeImage" src="../images/pencil.svg" />
+                        <p class="businessTypeText">Jestem<br>projektantem UI/UX</p>
+                        <div class="checkboxButton">
+                            <div class="checkboxButtonIcon"><img src="../images/checkIcon.svg" alt="" /></div>
+                            <span>Wybierz</span>
+                        </div>
+                    </div>
+                    <div class="businessType">
+                        <img class="businessTypeImage" src="../images/gear-small.svg" />
+                        <p class="businessTypeText">Jestem<br>projektantem UI/UX</p>
+                        <div class="checkboxButton">
+                            <div class="checkboxButtonIcon"><img src="../images/checkIcon.svg" alt="" /></div>
+                            <span>Wybierz</span>
+                        </div>
+                    </div>
+                </div>
+                <p>Zebraliśmy 10 najpopularniejszych problemów dla Ciebie, które możesz zbadać i poprawić.</p>
+                <div class="options">
+                    <div class="checkboxButton checked">
+                        <div class="checkboxButtonIcon"><img src="../images/checkIcon.svg" alt="" /></div>
+                        <span>Moi klienci wychodzą z koszyka bez dokonywania transakcji.</span>
+                    </div>
+                    <div class="checkboxButton">
+                        <div class="checkboxButtonIcon"><img src="../images/checkIcon.svg" alt="" /></div>
+                        <span>Moi klienci nie mogą znaleźć interesującego produktu.</span>
+                    </div>
+                    <div class="checkboxButton">
+                        <div class="checkboxButtonIcon"><img src="../images/checkIcon.svg" alt="" /></div>
+                        <span>Moi klienci nie mogą znaleźć interesującego produktu.</span>
+                    </div>
+                    <div class="checkboxButton">
+                        <div class="checkboxButtonIcon"><img src="../images/checkIcon.svg" alt="" /></div>
+                        <span>Chce przetestować inny problem.</span>
+                    </div>
+                </div>
+                <p>Świetnie! Stwórz test ścieżki zakupowej w swoim e-commerce i popraw znacząco konwersję.</p>
+                <a href="/#wykonaj-test">
+                <button class="primaryButton">
+                    <img class="buttonIcon" src="../images/buttonIcon.svg" alt="" />
+                    Wykonaj test UX
+                </button>
+                </a>
             </div>
         </div>
     </section>

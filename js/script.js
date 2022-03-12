@@ -187,3 +187,13 @@ infoSteps && infoSteps.forEach(step => {
         }
     })
 });
+
+// CHECKBOX BUTTONS
+const checkboxButtons = document.querySelectorAll('.checkboxButton');
+
+checkboxButtons && checkboxButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        button.classList.toggle('checked');
+        button.closest('.businessType').classList.toggle('active');
+    })
+})

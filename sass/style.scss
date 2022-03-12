@@ -9,6 +9,7 @@
 @import "sections/useKnowledge";
 @import "sections/haveQuestions";
 @import "sections/howItWorks";
+@import "sections/isItForMe";
 @import "sections/footer";
 
 *,
@@ -85,7 +86,11 @@ body {
 
 .buttonIcon {
   margin-right: 10px;
-  padding-bottom: 2px;
+}
+
+.linkButton {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .logoSection {
@@ -103,6 +108,7 @@ body {
   font-weight: 600;
   color: $primary;
   margin-top: 0;
+  margin-bottom: 30px;
   @media (max-width: 1200px) {
     font-size: 55px;
   }
